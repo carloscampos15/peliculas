@@ -8,6 +8,6 @@ class Video extends Model
 {
      
     protected $fillable = [
-        'nombre', 'duracion', 'descripcion', 'categoria_id','autor_id','calificacion', 'nro_vistas',
+        'nombre', 'duracion', 'descripcion', 'categoria_id','autor_id',
     ];
 }
