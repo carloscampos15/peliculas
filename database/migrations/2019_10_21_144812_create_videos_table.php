@@ -21,15 +21,9 @@ class CreateVideosTable extends Migration
             $table->unsignedBigInteger('categoria_id');
             $table->unsignedBigInteger('autor_id');
             $table->foreign('categoria_id')->references('id')->on('categorias');
-            $table->foreign('autor_id')->references('id')->on('user');
+            $table->foreign('autor_id')->references('id')->on('users');
             $table->integer('calificacion');
-            $table->integer('descripcion');
-
-
-
-'nombre', 'duracion', 'descripcion', 'categoria_id','autor_id','calificacion', 'nro_vistas',
-
-
+            $table->integer('nro_vistas');
             $table->timestamps();
         });
     }
