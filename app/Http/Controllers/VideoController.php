@@ -38,6 +38,11 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'descripcion' => 'min:3|max:150'
+        ]);
+
         Video::create([
             'nombre' => $request->nombre,
             'duracion' => $request->duracion,

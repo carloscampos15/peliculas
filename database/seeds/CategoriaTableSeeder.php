@@ -28,5 +28,9 @@ class CategoriaTableSeeder extends Seeder
         App\Categoria::create([
             'name' => 'Politica',
         ]);
+
+        App\Categoria::create([
+            'name' => 'Educacion',
+        ]);
     }
 }

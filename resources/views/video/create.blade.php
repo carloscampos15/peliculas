@@ -1,6 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if ($errors->any())
+<div class="container">
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+</div>
+@endif
+
 <div class="container">
     <h1>Agregar un video nuevo</h1>
     <p class="lead">Especificar los datos del nuevo video.</p>
@@ -24,7 +37,7 @@
                     <label for="inputCategoria">Categoria</label>
                     <select id="inputCategoria" class="form-control" name="categoria">
                         @foreach ($categorias as $categoria)
-                            <option value="{{ $categoria->id }}">{{ $categoria->name }}</option>
+                        <option value="{{ $categoria->id }}">{{ $categoria->name }}</option>
                         @endforeach
                     </select>
                 </div>
